@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1400" viewBox="0 0 1200 1400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration abstraite">
+  <defs>
+    <linearGradient id="bg" x1="1200" y1="0" x2="0" y2="1400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF3D6E"/>
+      <stop offset="0.5" stop-color="#FF4AB3"/>
+      <stop offset="1" stop-color="#FF4B2B"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(880 260) rotate(125) scale(620 520)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="paint" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF2F6C"/>
+      <stop offset="0.55" stop-color="#FF4BB6"/>
+      <stop offset="1" stop-color="#FF5B2E"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1400" fill="url(#bg)"/>
+  <rect width="1200" height="1400" fill="url(#glow)"/>
+
+  <!-- "portrait" abstraction (not a real face) -->
+  <g opacity="0.96">
+    <path d="M340 250C410 140 560 110 690 160C820 210 915 330 900 470C885 610 795 710 690 770C585 830 435 820 350 735C265 650 240 510 270 395C290 325 310 290 340 250Z" fill="#FFE7F2" fill-opacity="0.35"/>
+    <path d="M440 390C520 335 660 350 720 430C785 515 745 635 650 685C555 735 435 695 390 600C350 515 375 440 440 390Z" fill="#1B0B1A" fill-opacity="0.20"/>
+    <path d="M520 520C565 500 640 505 670 545C705 590 675 650 615 668C555 686 500 650 492 595C486 555 495 535 520 520Z" fill="#FFFFFF" fill-opacity="0.25"/>
+  </g>
+
+  <!-- paint strokes -->
+  <g filter="url(#blur)" opacity="0.92">
+    <path d="M980 520C820 480 650 560 520 660C400 750 250 800 120 780L120 1040C280 1090 430 1040 570 960C730 870 900 820 1080 860L1080 600C1040 560 1010 540 980 520Z" fill="url(#paint)"/>
+    <path d="M1080 680C910 630 750 710 610 800C470 890 320 930 120 900" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="46" stroke-linecap="round"/>
+    <path d="M1050 760C900 720 770 780 640 860C510 940 360 980 150 955" stroke="#1B0B1A" stroke-opacity="0.16" stroke-width="34" stroke-linecap="round"/>
+  </g>
+
+  <!-- subtle grid -->
+  <g opacity="0.08">
+    <path d="M0 280H1200" stroke="#FFFFFF"/>
+    <path d="M0 560H1200" stroke="#FFFFFF"/>
+    <path d="M0 840H1200" stroke="#FFFFFF"/>
+    <path d="M0 1120H1200" stroke="#FFFFFF"/>
+    <path d="M240 0V1400" stroke="#FFFFFF"/>
+    <path d="M480 0V1400" stroke="#FFFFFF"/>
+    <path d="M720 0V1400" stroke="#FFFFFF"/>
+    <path d="M960 0V1400" stroke="#FFFFFF"/>
+  </g>
+</svg>
