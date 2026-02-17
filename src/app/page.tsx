@@ -81,9 +81,6 @@ export default function Home() {
                 className="h-[420px] w-full object-cover md:h-[520px]"
               />
             </div>
-            <p className="mt-3 text-xs text-white/70">
-              Photo — tu peux la remplacer quand tu veux.
-            </p>
           </div>
         </header>
 
