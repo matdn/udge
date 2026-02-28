@@ -1,4 +1,265 @@
 import Image from "next/image";
+import Link from "next/link";
+import { LinkButton } from "@/components/LinkButton";
+import { mesures } from "@/content/mesures";
+
+export default function Home() {
+  return (
+    <main id="main-content" className="bg-programme min-h-dvh">
+      <div className="mx-auto max-w-6xl px-6 py-10 md:py-14">
+        <header className="grid items-end gap-8 md:grid-cols-2 md:gap-10">
+          <div className="space-y-6">
+            <p className="kicker">ACCUEIL</p>
+            <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight md:text-5xl">
+              <span className="text-zinc-950">LE VÉSINET POUR TOUS</span>
+            </h1>
+            <p className="max-w-2xl text-base leading-relaxed text-zinc-700 md:text-lg">
+              Liste citoyenne d’union de la gauche et des écologistes
+            </p>
+            <p className="max-w-2xl text-base leading-relaxed text-zinc-700 md:text-lg">
+              Un nouvel élan démocratique, écologique et solidaire pour Le Vésinet
+            </p>
+            <p className="max-w-2xl text-sm leading-relaxed text-zinc-700 md:text-base">
+              Nous voulons une ville qui redonne du pouvoir à ses habitantes et habitants, protège les plus fragiles,
+              prépare l’avenir écologique et fait vivre la démocratie au quotidien.
+            </p>
+            <p className="text-sm font-semibold text-zinc-800">
+              🗳 Élections municipales – 15 et 22 mars 2026
+            </p>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <LinkButton href="/programme" variant="primary">
+                Découvrir notre programme
+              </LinkButton>
+              <LinkButton href="/rejoindre" variant="secondary">
+                Nous rejoindre
+              </LinkButton>
+              <LinkButton href="/contact" variant="secondary">
+                Nous contacter
+              </LinkButton>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="card overflow-hidden">
+              <Image
+                src="/imageListe.jpeg"
+                alt="Photo de la liste Le Vésinet pour tous"
+                width={1200}
+                height={1400}
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="h-[420px] w-full object-cover md:h-[520px]"
+              />
+            </div>
+          </div>
+        </header>
+
+        <section className="mt-12 md:mt-16" aria-labelledby="ambition">
+          <div className="card p-7 md:p-9">
+            <h2 id="ambition" className="section-title">
+              Notre ambition
+            </h2>
+            <div className="mt-4 space-y-4 text-sm leading-relaxed text-zinc-700 md:text-base">
+              <p>
+                Nous portons une ambition claire : insuffler au Vésinet un nouvel élan pour en faire une ville plus
+                démocratique, plus solidaire et pleinement engagée dans la transition écologique.
+              </p>
+              <p>
+                Notre conviction est simple : le pouvoir local doit appartenir aux habitantes et aux habitants.
+              </p>
+              <p>
+                Nous défendons une démocratie active, transparente et participative, où les décisions sont construites
+                collectivement et où l’intérêt général prime sur les intérêts particuliers.
+              </p>
+              <p>Gouverner, c’est partager le pouvoir, rendre des comptes et faire vivre le débat.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-6" aria-labelledby="priorites">
+          <div className="card p-7 md:p-9">
+            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <h2 id="priorites" className="section-title">
+                  Nos priorités pour Le Vésinet
+                </h2>
+                <p className="mt-3 max-w-3xl text-sm text-zinc-600 md:text-base">
+                  Des priorités claires, concrètes et applicables dès le début du mandat.
+                </p>
+              </div>
+              <LinkButton href="/programme" variant="secondary">
+                Voir le détail de notre programme
+              </LinkButton>
+            </div>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <div className="programme-panel">
+                <p className="programme-panel-title">🏘 Une démocratie locale vivante</p>
+                <p className="programme-p">
+                  Créer une Assemblée citoyenne tirée au sort, ouvrir de nouveaux espaces de concertation et rendre les
+                  décisions municipales plus transparentes.
+                </p>
+              </div>
+                <div className="programme-panel">
+                <p className="programme-panel-title">🎭 Une ville dynamique et conviviale</p>
+                <p className="programme-p">
+                  Créer un tiers-lieu culturel en centre-ville, soutenir les commerçants et artisans, développer des
+                  équipements sportifs en accès libre.
+                </p>
+              </div>
+              <div className="programme-panel">
+                <p className="programme-panel-title">🌿 Une transition écologique concrète et juste</p>
+                <p className="programme-p">
+                  Préserver notre cadre de vie exceptionnel, protéger la biodiversité, développer les mobilités douces,
+                  rénover les bâtiments municipaux et proposer une alimentation plus saine et locale — sans laisser
+                  personne de côté.
+                </p>
+              </div>
+              <div className="programme-panel">
+                <p className="programme-panel-title">👶 Une ville qui protège et accompagne</p>
+                <p className="programme-p">
+                  Renforcer les crèches, les écoles, les services publics du quotidien. Mettre en place une tarification
+                  sociale progressive pour garantir un accès plus juste aux services municipaux.
+                </p>
+              </div>
+            
+            
+              <div className="programme-panel md:col-span-2">
+                <p className="programme-panel-title">🤝 Une sécurité humaine et efficace</p>
+                <p className="programme-p">
+                  Renforcer la présence de terrain, développer la médiation, privilégier la prévention et la cohésion
+                  sociale.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-6" aria-labelledby="mesures">
+          <div className="card p-7 md:p-9">
+            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <h2 id="mesures" className="section-title">
+                  Nos 12 premières mesures dès 2026
+                </h2>
+                <p className="mt-3 max-w-3xl text-sm text-zinc-600 md:text-base">
+                  Des décisions utiles, réalistes et applicables dès le début du mandat.
+                </p>
+              </div>
+              <LinkButton href="/12-mesures" variant="primary">
+                Découvrir les 12 mesures en détail
+              </LinkButton>
+            </div>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {mesures.map((m) => (
+                <Link
+                  key={m.slug}
+                  href="/12-mesures"
+                  className="block rounded-2xl bg-white p-5 ring-1 ring-black/10 transition hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950/40"
+                >
+                  <p className="text-xs font-semibold text-zinc-600">Mesure {m.number}</p>
+                  <p className="mt-1 text-sm font-semibold text-zinc-950">{m.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-700">{m.summary}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-6" aria-labelledby="equipe">
+          <div className="card p-7 md:p-9">
+            <div className="grid gap-6 md:grid-cols-2 md:items-center">
+              <div>
+                <h2 id="equipe" className="section-title">
+                  Une équipe intergénérationnelle et engagée
+                </h2>
+                <div className="mt-4 space-y-4 text-sm leading-relaxed text-zinc-700 md:text-base">
+                  <p>
+                    Notre liste rassemble 34 candidates et candidats issus de tous les horizons : développeur web,
+                    assistante parlementaire, chercheur en intelligence artificielle, urbaniste, enseignants,
+                    ingénieurs, professionnels de santé, agents publics, artistes, commerçants et retraités engagés.
+                  </p>
+                  <p>
+                    Cette diversité est notre force. Elle reflète la richesse et la pluralité du Vésinet.
+                  </p>
+                  <p>
+                    Autour de Matis Dené, 23 ans, tête de liste, et de Nabila Kéramane, numéro 2, notre équipe incarne
+                    le renouvellement, l’expérience et l’engagement collectif.
+                  </p>
+                </div>
+                <div className="mt-6">
+                  <LinkButton href="/equipe" variant="secondary">
+                    Découvrir l’équipe
+                  </LinkButton>
+                </div>
+              </div>
+
+              <div className="card overflow-hidden">
+                <Image
+                  src="/imageListe.jpeg"
+                  alt="Photo d’équipe"
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="h-[260px] w-full object-cover md:h-[320px]"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-6" aria-labelledby="vesinet-pour-tous">
+          <div className="card p-7 md:p-9">
+            <h2 id="vesinet-pour-tous" className="section-title">
+              Un Vésinet pour toutes et tous
+            </h2>
+            <ul className="programme-ul">
+              <li>Plus démocratique</li>
+              <li>Plus écologique</li>
+              <li>Plus solidaire</li>
+              <li>Plus inclusive</li>
+              <li>Plus moderne</li>
+            </ul>
+            <p className="programme-p">
+              Une ville qui protège, qui écoute et qui agit.
+            </p>
+            <p className="programme-p">
+              Un Vésinet pour toutes et tous.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-6" aria-labelledby="agir">
+          <div className="card p-7 md:p-9">
+            <h2 id="agir" className="section-title">
+              Engagez-vous à nos côtés
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-700 md:text-base">
+              La démocratie locale ne se construit pas seule.
+            </p>
+            <ul className="programme-ul">
+              <li>Participer à nos réunions publiques</li>
+              <li>Devenir bénévole</li>
+              <li>Proposer une idée</li>
+              <li>Rejoindre le groupe local Victoires Populaires</li>
+              <li>Nous soutenir et relayer nos propositions</li>
+            </ul>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <LinkButton href="/rejoindre" variant="primary">
+                Je m’engage
+              </LinkButton>
+              <LinkButton href="/contact" variant="secondary">
+                Nous contacter
+              </LinkButton>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}
 
 type TocItem = {
   href: string;
@@ -6,7 +267,7 @@ type TocItem = {
   description?: string;
 };
 
-export default function Home() {
+function LegacyProgrammeHome() {
   const toc: TocItem[] = [
     {
       href: "#democratie",
@@ -451,10 +712,6 @@ export default function Home() {
                 Tarification sociale progressive pour les services municipaux, fondée sur le quotient familial.
               </li>
               <li>
-                Réintroduction de la bourse communale et création d’un fonds municipal d’aide à l’acquisition de matériel
-                informatique.
-              </li>
-              <li>
                 Lutte contre l’isolement des personnes âgées et lutte contre la fracture numérique (cours gratuits).
               </li>
             </ul>
@@ -737,10 +994,10 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="mailto:contact@exemple.fr"
+                href="mailto:levesinetpourtous@gmail.com"
                 className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-zinc-950 shadow-sm transition hover:bg-white/90"
               >
-                contact@exemple.fr
+                levesinetpourtous@gmail.com
               </a>
               <a
                 href="#table-des-matieres"

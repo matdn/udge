@@ -2,7 +2,7 @@
 
 @layer base {
 	:root {
-		color-scheme: dark;
+		color-scheme: light;
 	}
 
 	body {
@@ -10,20 +10,51 @@
 	}
 
 	::selection {
-		background: color-mix(in oklab, #ff4ab3 55%, #ff4b2b 45%);
-		color: white;
+		background: color-mix(in oklab, #ffd84a 65%, #cf0000 35%);
+		color: #09090b;
+	}
+
+	.skip-link {
+		position: absolute;
+		top: 0.75rem;
+		left: 0.75rem;
+		transform: translateY(-200%);
+		padding: 0.6rem 0.9rem;
+		border-radius: 9999px;
+		background: #ffd84a;
+		color: #09090b;
+		font-weight: 600;
+		z-index: 60;
+	}
+
+	.skip-link:focus {
+		transform: translateY(0);
+		outline: 2px solid rgba(9, 9, 11, 0.35);
+		outline-offset: 2px;
+	}
+}
+
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
 	}
 }
 
 @layer components {
 	.bg-programme {
 		background:
-			radial-gradient(900px 700px at 78% 10%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0) 65%),
-			linear-gradient(135deg, #ff3d6e 0%, #ff4ab3 45%, #ff4b2b 100%);
+			radial-gradient(900px 700px at 78% 10%, rgba(207, 0, 0, 0.12), rgba(255, 255, 255, 0) 65%),
+			radial-gradient(900px 700px at 20% 0%, rgba(0, 75, 21, 0.1), rgba(255, 255, 255, 0) 60%),
+			linear-gradient(180deg, #ffffff 0%, #fff7e0 55%, #ffffff 100%);
 	}
 
 	.card {
-		@apply rounded-2xl bg-white/10 ring-1 ring-white/15 backdrop-blur;
+		@apply rounded-2xl bg-white/85 ring-1 ring-black/10 shadow-sm backdrop-blur;
 	}
 
 	.section-title {
@@ -31,7 +62,8 @@
 	}
 
 	.kicker {
-		@apply text-sm uppercase tracking-[0.2em] text-white/75;
+		font-weight: 900;
+		@apply text-sm uppercase tracking-[0.2em] text-zinc-600;
 	}
 
 	.programme {
@@ -39,23 +71,23 @@
 	}
 
 	.programme-h2 {
-		@apply text-xl md:text-2xl font-semibold tracking-tight text-white;
+		@apply text-xl md:text-2xl font-semibold tracking-tight text-zinc-950;
 	}
 
 	.programme-h3 {
-		@apply mt-7 text-lg md:text-xl font-semibold tracking-tight text-white;
+		@apply mt-7 text-lg md:text-xl font-semibold tracking-tight text-zinc-950;
 	}
 
 	.programme-lead {
-		@apply mt-3 text-base md:text-lg leading-relaxed text-white/90;
+		@apply mt-3 text-base md:text-lg leading-relaxed text-zinc-800;
 	}
 
 	.programme-p {
-		@apply mt-4 text-sm md:text-base leading-relaxed text-white/85;
+		@apply mt-4 text-sm md:text-base leading-relaxed text-zinc-700;
 	}
 
 	.programme-ul {
-		@apply mt-4 list-disc pl-5 text-sm md:text-base leading-relaxed text-white/85;
+		@apply mt-4 list-disc pl-5 text-sm md:text-base leading-relaxed text-zinc-700;
 	}
 
 	.programme-ul > li {
@@ -71,18 +103,18 @@
 	}
 
 	.programme-panel {
-		@apply rounded-2xl bg-black/20 p-5 ring-1 ring-white/10;
+		@apply rounded-2xl bg-zinc-50 p-5 ring-1 ring-black/10;
 	}
 
 	.programme-panel-title {
-		@apply text-sm font-semibold text-white;
+		@apply text-sm font-semibold text-zinc-950;
 	}
 
 	.programme-callout {
-		@apply mt-6 rounded-2xl bg-white/10 p-5 ring-1 ring-white/15;
+		@apply mt-6 rounded-2xl bg-white p-5 ring-1 ring-black/10;
 	}
 
 	.programme-callout-title {
-		@apply text-sm font-semibold text-white;
+		@apply text-sm font-semibold text-zinc-950;
 	}
 }
