@@ -98,7 +98,7 @@ export default function DocumentsPage() {
                 alt="Visuel de campagne"
                 width={1200}
                 height={800}
-                className="h-[220px] w-full object-cover"
+                className="h-auto w-full"
               />
             </div>
           </div>

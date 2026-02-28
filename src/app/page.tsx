@@ -49,7 +49,7 @@ export default function Home() {
                 height={1400}
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="h-[420px] w-full object-cover md:h-[520px]"
+                className="h-auto w-full"
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function Home() {
                   width={1200}
                   height={800}
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="h-[260px] w-full object-cover md:h-[320px]"
+                  className="h-auto w-full"
                 />
               </div>
             </div>
@@ -339,7 +339,7 @@ function LegacyProgrammeHome() {
                 height={1400}
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="h-[420px] w-full object-cover md:h-[520px]"
+                className="h-auto w-full"
               />
             </div>
           </div>
