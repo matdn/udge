@@ -38,9 +38,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/10 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <a href="#main-content" className="skip-link">
-        Aller au contenu
-      </a>
+
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-6 py-3">
         <Link href="/" className="font-semibold text-lg tracking-tight text-black">
           Le Vésinet pour tous

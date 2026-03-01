@@ -4,14 +4,14 @@ import { EditorialPage } from "@/components/templates/EditorialPage";
 
 export const metadata: Metadata = {
   title: "Nous rejoindre",
-  description: "S’engager : bénévolat, newsletter, ou rejoindre Victoires Populaires.",
+  description: "Aider pendant la campagne, être informé(e) sur Victoires Populaires, ou rejoindre le groupe local du Vésinet.",
 };
 
 export default function RejoindrePage() {
   return (
     <EditorialPage
       title="Nous rejoindre"
-      chapo="Aider pendant la campagne, être informé, ou rejoindre Victoires Populaires : choisissez votre parcours."
+      chapo="Aider pendant la campagne, être informé(e) sur le mouvement Victoires Populaires, rejoindre le groupe local Victoires Populaires du Vésinet : choisissez votre parcours."
       actions={null}
     >
       <section className="card p-7 md:p-9">
@@ -19,20 +19,18 @@ export default function RejoindrePage() {
         <div className="mt-4 grid gap-4 md:grid-cols-3">
           <div className="programme-panel">
             <p className="programme-panel-title">1) Aider pendant la campagne</p>
-            <p className="programme-p">Tracts, affichage, logistique, présence terrain, relais local.</p>
-          </div>
-          <div className="programme-panel">
-            <p className="programme-panel-title">2) Être informé</p>
-            <p className="programme-p">Recevoir les infos et invitations (newsletter).</p>
-          </div>
-          <div className="programme-panel">
-            <p className="programme-panel-title">3) Victoires Populaires</p>
             <p className="programme-p">
-              Rejoindre le mouvement (lien externe).
-              {" "}
-              <Link className="underline" href="https://victoirespopulaires.fr/" target="_blank" rel="noreferrer">
-                victoirespopulaires.fr
-              </Link>
+              Actions de terrain (tractage, porte-à-porte, réunions citoyennes, etc.) et/ou actions d’appels téléphoniques.
+            </p>
+          </div>
+          <div className="programme-panel">
+            <p className="programme-panel-title">2) Être informé(e) sur Victoires Populaires</p>
+            <p className="programme-p">Recevoir les informations sur le mouvement Victoires Populaires.</p>
+          </div>
+          <div className="programme-panel">
+            <p className="programme-panel-title">3) Rejoindre le groupe local</p>
+            <p className="programme-p">
+              Rejoindre le groupe local Victoires Populaires du Vésinet.
             </p>
           </div>
         </div>
@@ -55,7 +53,11 @@ export default function RejoindrePage() {
             </label>
             <label className="flex items-center gap-2 text-sm text-zinc-700">
               <input required type="radio" name="parcours" value="newsletter" />
-              Je veux être informé (newsletter)
+              Je veux être informé(e) sur Victoires Populaires
+            </label>
+            <label className="flex items-center gap-2 text-sm text-zinc-700">
+              <input required type="radio" name="parcours" value="vp-groupe-local" />
+              Je veux rejoindre le groupe local Victoires Populaires du Vésinet
             </label>
           </fieldset>
 
